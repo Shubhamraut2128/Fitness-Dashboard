@@ -117,13 +117,13 @@ Professional Layout & Theme – White background, blue & green highlights
 ---
 
 📁 Project Structure
-Fitness-Dashboard/
+```Fitness-Dashboard/
 │
 ├── dataset/
 │   └── gym_members_exe.csv
 ├── README.md
 └── PowerBI_Dashboard.pbix
-
+```
 ---
 
 🖋 Author
