@@ -1,12 +1,14 @@
 # Fitness Analytics Dashboard 🏋️‍♂️📊
 
-A **comprehensive fitness analytics dashboard** to track, visualize, and analyze gym members' data for better insights into workouts, calories, and health metrics. Built for professional analytics and interactive reporting.
+![Dashboard Screenshot](dataset/dashboard_screenshot.png)
+
+A **professional fitness analytics dashboard** built in **Power BI** to track, visualize, and analyze gym members’ data for insights on workouts, calories burned, heart rate, BMI, and overall fitness trends. Ideal for trainers, gym managers, and fitness enthusiasts.
 
 ---
 
 ## 🎯 Dataset Overview
 
-The dashboard uses the following columns from the dataset `gym_members_exe`:
+The dashboard uses the dataset `gym_members_exe` with the following columns:
 
 | Column Name | Description |
 |-------------|-------------|
@@ -26,11 +28,11 @@ The dashboard uses the following columns from the dataset `gym_members_exe`:
 | Workout_Frequency | Number of workout sessions per week |
 | Workout_Type | Type of workout (Cardio, Strength, etc.) |
 
-> This dataset is perfect for building a **fitness analytics dashboard**.
+> This dataset is ideal for creating an **interactive and professional fitness dashboard**.
 
 ---
 
-## 🚀 STEP 1: Important Measures (DAX)
+## 🚀 STEP 1: Key Measures (DAX)
 
 Create **New Measures** in Power BI under `Modeling → New Measure`:
 
@@ -50,74 +52,58 @@ AvgHeartRate = AVERAGE('gym_members_exe'[Avg_BPM])
 -- Total Members
 TotalMembers = COUNTROWS('gym_members_exe')
 
--- High Intensity Members (Optional Advanced Measure)
+-- High Intensity Members (Optional)
 HighIntensity = 
 CALCULATE(
     COUNTROWS('gym_members_exe'),
     'gym_members_exe'[Avg_BPM] > 150
-)📊 STEP 2: Dashboard Layout
-1️⃣ Top Section: KPI Cards
+)
 
-Add 5 card visuals:
+```
 
-Total Members
+## 📊 STEP 2: Dashboard Layout
 
-Total Calories Burned
+### 1️⃣ Top Section: KPI Cards
+Add **5 card visuals**:
 
-Average BMI
+- **Total Members**  
+- **Total Calories Burned**  
+- **Average BMI**  
+- **Average Session Duration**  
+- **Average Heart Rate**  
 
-Average Session Duration
+> Use **large fonts and bold visuals** for a professional appearance.
 
-Average Heart Rate
+---
 
-Use large fonts and bold visuals for a professional appearance.
+### 2️⃣ Middle Section: Charts
 
-2️⃣ Middle Section: Charts
-Chart	Type	Axis	Values
-Calories by Workout Type	Bar Chart	Workout_Type	SUM(Calories_Burned)
-Gender Distribution	Pie Chart	Gender	COUNTROWS
-Experience Level vs Calories	Column Chart	Experience_Level	SUM(Calories_Burned)
-BMI vs Fat Percentage	Scatter Plot	BMI	Fat_Percentage
-3️⃣ Bottom Section: Workout Frequency
+| Chart | Type | Axis | Values |
+|-------|------|------|--------|
+| Calories by Workout Type | Bar Chart | Workout_Type | SUM(Calories_Burned) |
+| Gender Distribution | Pie Chart | Gender | COUNTROWS |
+| Experience Level vs Calories | Column Chart | Experience_Level | SUM(Calories_Burned) |
+| BMI vs Fat Percentage | Scatter Plot | BMI | Fat_Percentage |
 
-Chart Type: Column / Histogram
+---
 
-Axis: Workout_Frequency
+### 3️⃣ Bottom Section: Workout Frequency
 
-Values: COUNTROWS
+- **Chart Type:** Column / Histogram  
+- **Axis:** Workout_Frequency  
+- **Values:** COUNTROWS  
 
-4️⃣ Slicers (Interactive Filters)
+---
 
-Gender
+### 4️⃣ Slicers (Interactive Filters)
 
-Workout_Type
+Add slicers for:  
 
-Experience_Level
+- Gender  
+- Workout_Type  
+- Experience_Level  
 
-Makes the dashboard interactive and dynamic.
-
-🎨 STEP 3: Professional Touch
-
-Add Dashboard Title
-
-Include Gym Logo (demo placeholder)
-
-Show Last Updated Date
-
-Maintain proper alignment and spacing
-
-Use white background with blue + green highlights for a clean, professional look
-
-💡 STEP 4: Advanced Insights (Optional)
-
-Highlight High Intensity Members using Avg_BPM > 150
-
-Apply conditional formatting to key charts
-
-Use tooltips to show additional metrics (Calories/Session, Avg BPM, BMI, Fat Percentage)
-
-Create advanced DAX measures for deeper analytics
-
+> These slicers make the dashboard **interactive and dynamic**.
 ⚡ Technologies Used
 
 Power BI – Interactive data visualization
@@ -128,6 +114,8 @@ Slicers & Filters – Interactive filtering
 
 Professional Layout & Theme – White background, blue & green highlights
 
+---
+
 📁 Project Structure
 Fitness-Dashboard/
 │
@@ -135,33 +123,11 @@ Fitness-Dashboard/
 │   └── gym_members_exe.csv
 ├── README.md
 └── PowerBI_Dashboard.pbix
-📌 Extra Notes
-
-Ensure your dataset is clean before importing to Power BI
-
-Maintain consistent colors and fonts for a professional appearance
-
-Always include last updated date for clarity
-
-KPI cards should be easy to read and properly aligned at the top
-
-Created with ❤️ for Gym Analytics & Fitness Insights
-
 
 ---
 
-✅ This professional version includes:  
-- Dataset details  
-- Step-by-step **DAX measures**  
-- **Dashboard layout** with KPI cards, charts, and bottom section  
-- Interactive **slicers**  
-- **Professional touches** (title, logo, theme, spacing)  
-- **Advanced analytics insights**  
-- Technologies used & project structure  
-- Extra notes for maintaining clarity  
+🖋 Author
 
----
+Shubham Raut
 
-If you want, I can **also create an enhanced version with demo images, badges, and a GIF of the dashboard** embedded so your GitHub repo looks **super professional and interactive**.  
-
-Do you want me to create that next?
+Data Analyst & Power BI Developer
