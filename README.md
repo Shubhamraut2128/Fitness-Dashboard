@@ -1,6 +1,7 @@
 # Fitness Analytics Dashboard 🏋️‍♂️📊
 
-![Dashboard Screenshot](dataset/dashboard_screenshot.png)
+![Dashboard Screenshot](<img width="1882" height="978" alt="image" src="https://github.com/user-attachments/assets/233ec34e-c794-414e-9af2-95b0e307e02e" />
+)
 
 A **professional fitness analytics dashboard** built in **Power BI** to track, visualize, and analyze gym members’ data for insights on workouts, calories burned, heart rate, BMI, and overall fitness trends. Ideal for trainers, gym managers, and fitness enthusiasts.
 
